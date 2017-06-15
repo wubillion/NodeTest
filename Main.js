@@ -2,11 +2,11 @@
  * Created by wbl on 2017/6/13.
  */
 
-//引用Hello模块(类)
-var Hello = require('./Hello/HelloTest');
-
-hello = new Hello();
-hello.setName('Wbl');
-hello.sayHello();
+var server = require("./Hello/Server");
+var router = require("./Hello/Router");
 
 
+//函数原型不需要加()
+server.start(router.route);
+
+console.log(__dirname);
